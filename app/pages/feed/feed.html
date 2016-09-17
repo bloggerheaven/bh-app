@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content no-padding class="feed">
-  <ion-card *ngFor="let post of posts" no-margin on-tap="pushSinglePage(post.id)">
+  <ion-card *ngFor="let post of posts; let i = index" no-margin on-tap="pushSinglePage(post.id)">
     <ion-card-header>
       <ion-item>
         <ion-item>
@@ -15,13 +15,13 @@
           <span>Madame Charlie</span>
         </ion-item>
         <span item-right text-center>
-    <h3>37</h3>
-    <p>Likes</p>
-    </span>
+          <h3>37</h3>
+          <p>Likes</p>
+        </span>
       </ion-item>
     </ion-card-header>
 
-    <img src="img/mock-image-1.jpg"/>
+    <img src="img/mock-image-{{i}}.jpg" />
     <ion-card-content>
 
       <ion-item>
