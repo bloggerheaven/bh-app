@@ -1,5 +1,5 @@
 <ion-content class="member">
-  <div class="post-header">
+  <div class="post-header" [ngStyle]="{'background-image': 'url('+member.backgroundImg+')'}">
     <ion-toolbar>
       <ion-buttons>
         <button royal on-tap="popPage()">
