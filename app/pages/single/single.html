@@ -1,8 +1,8 @@
 <ion-content class="single">
   <div class="post-header">
     <ion-toolbar>
-      <ion-buttons start>
-        <button royal>
+      <ion-buttons>
+        <button royal on-tap="popFeedPage()">
           <ion-icon name="arrow-back"></ion-icon>
         </button>
       </ion-buttons>
@@ -20,7 +20,7 @@
 
   <div class="post-content">
     <div class="post-content-meta">
-      <h2>Outfit: Metalic Look</h2>
+      <h2>{{post.title}}</h2>
       <hr>
     </div>
     <p>
