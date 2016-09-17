@@ -3,8 +3,13 @@
 
 node_modules/
 www/build/
-platforms/
-plugins/
+platforms/*
+!platforms/platforms.json
+!platforms/ios/ios.json
+!platforms/ios/frameworks.json
+plugins/*
+!plugins/fetch.json
+!plugins/ios.json
 *.swp
 .DS_Store
 Thumbs.db

@@ -1,1 +1,26 @@
+.members {
+  ion-item {
+    border-bottom: 1px solid color($colors, decent);
 
+    .item-inner {
+      border: 0;
+    }
+
+    &:last-child {
+      border-color: color($colors, decent);
+    }
+  }
+
+  ion-avatar {
+    padding: 10px 0;
+
+    img {
+      width: 6rem;
+      max-width: 6rem;
+      height: 6rem;
+      max-height: 6rem;
+
+      border-radius: 3rem;
+    }
+  }
+}

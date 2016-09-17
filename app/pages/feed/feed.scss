@@ -1,1 +1,30 @@
+.feed {
+  ion-card {
+    width: 100%;
 
+    border-bottom: 1px solid color($colors, decent);
+    border-radius: 0;
+    box-shadow: none;
+
+    ion-card-header {
+      padding: 0 16px;
+    }
+
+    .post-image {
+      height: 200px;
+      max-height: 200px;
+
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    ion-item {
+      padding: 0;
+
+      .item-inner {
+        border: 0;
+      }
+    }
+  }
+}
