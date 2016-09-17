@@ -6,6 +6,7 @@
     background-image: url('http://magazin.bloggerheaven.de/wp-content/uploads/2016/08/daninanaa.files_.wordpress.com201608dsc1486-231e6a00580222449518f747c71f172826242f3c.jpg');
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
 
     ion-toolbar {
       padding: 0;
@@ -16,7 +17,7 @@
       }
 
       .bar-button-default {
-        color: color($colors, _white);
+        color: color($colors, secondary);
       }
     }
   }
@@ -42,6 +43,7 @@
       padding-top: 8px;
       padding-bottom: 16px;
     }
+
     p {
       font-size: 1.4rem;
       line-height: 2.4rem;
