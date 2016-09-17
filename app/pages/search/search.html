@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="search">
+<ion-content class="feed search">
   <ion-searchbar (ionInput)="searchPosts($event)"></ion-searchbar>
 
   <ion-grid *ngIf="!posts.length > 0">
@@ -38,7 +38,7 @@
     </ion-row>
   </ion-grid>
 
-  <ion-card *ngFor="let post of posts; let i = index" no-margin>
+  <ion-card *ngFor="let post of posts" no-margin>
     <ion-card-header>
       <ion-item>
         <ion-item on-tap="pushMemberPage(post.member)">
@@ -47,19 +47,17 @@
           </ion-avatar>
           <span>{{findMember(post).name}}</span>
         </ion-item>
-        <span item-right text-center>
-          <h3>37</h3>
-          <p>Likes</p>
+        <span item-right text-right>
+          <p>3h ago</p>
         </span>
       </ion-item>
     </ion-card-header>
 
     <div class="post-image" on-tap="pushSinglePage(post.id)"
-         [ngStyle]="{'background-image': 'url(img/mock-image-' + i + '.jpg)'}"></div>
+         [ngStyle]="{'background-image': 'url('+post.featuredImg+')'}"></div>
     <ion-card-content on-tap="pushSinglePage(post.id)">
       <ion-item>
         <h2>{{post.title}}</h2>
-        <p>#Outfit #Look #Autumn</p>
         <ion-icon name="arrow-forward" item-right large></ion-icon>
       </ion-item>
     </ion-card-content>
