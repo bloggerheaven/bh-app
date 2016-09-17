@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Post } from '../../models/post';
-import { Member } from '../../models/member';
-import { WpDataService } from '../../providers/wp-data/wp-data-service';
-import { SinglePage } from '../single/single';
-import { MemberPage } from '../member/member';
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
+import {Post} from '../../models/post';
+import {Member} from '../../models/member';
+import {WpDataService} from '../../providers/wp-data/wp-data-service';
+import {SinglePage} from '../single/single';
+import {MemberPage} from '../member/member';
 
 @Component({
   templateUrl: 'build/pages/search/search.html',
@@ -22,7 +22,9 @@ export class SearchPage {
   searchPosts(event) {
     // Dummy search
     if (event.target.value.length > 0) {
-      this.posts = this.wpDataService.getPosts().splice(0,5).sort(function() { return .5 - Math.random(); });
+      this.posts = this.wpDataService.getPosts().splice(0, 5).sort(function () {
+        return .5 - Math.random();
+      });
     } else {
       this.posts = [];
     }
