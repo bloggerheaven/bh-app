@@ -1,5 +1,4 @@
 .members {
-
   ion-item {
     border-bottom: 1px solid color($colors, decent);
 
@@ -13,9 +12,9 @@
   }
 
   ion-avatar {
-    padding: 10px 0px;
     min-width: 6rem;
     min-height: 6rem;
+    padding: 10px 0;
 
     img {
       min-width: 6rem;
