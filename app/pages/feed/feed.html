@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content no-padding class="feed">
-  <ion-card *ngFor="let post of posts" no-margin>
+  <ion-card *ngFor="let post of posts; let i = index" no-margin on-tap="pushSinglePage(post.id)">
     <ion-card-header>
       <ion-item>
         <ion-item on-tap="pushMemberPage(post.member)">
@@ -21,9 +21,9 @@
       </ion-item>
     </ion-card-header>
 
-    <img src="img/mock-image-1.jpg" on-tap="pushSinglePage(post.id)"/>
+    <div class="post-image" on-tap="pushSinglePage(post.id)"
+         [ngStyle]="{'background-image': 'url(img/mock-image-' + i + '.jpg)'}"></div>
     <ion-card-content on-tap="pushSinglePage(post.id)">
-
       <ion-item>
         <h2>{{post.title}}</h2>
         <p>#Outfit #Look #Autumn</p>
