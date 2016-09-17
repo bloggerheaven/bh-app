@@ -4,7 +4,7 @@
   <ion-list>
     <ion-item *ngFor="let member of members" on-tap="pushMemberPage(member.id)">
       <ion-avatar item-left>
-        <img src="img/avatar-test.jpg">
+        <img [src]="member.profileImg">
       </ion-avatar>
       <h2>{{member.name}}</h2>
       <p>107 Posts</p>

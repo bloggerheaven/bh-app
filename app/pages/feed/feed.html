@@ -5,14 +5,14 @@
 </ion-header>
 
 <ion-content no-padding class="feed">
-  <ion-card *ngFor="let post of posts; let i = index" no-margin on-tap="pushSinglePage(post.id)">
+  <ion-card *ngFor="let post of posts; let i = index" no-margin>
     <ion-card-header>
       <ion-item>
         <ion-item on-tap="pushMemberPage(post.member)">
           <ion-avatar item-left>
-            <img src="img/avatar-test.jpg">
+            <img [src]="findMember(post).profileImg">
           </ion-avatar>
-          <span>Madame Charlie</span>
+          <span>{{findMember(post).name}}</span>
         </ion-item>
         <span item-right text-center>
           <h3>37</h3>

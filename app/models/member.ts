@@ -4,7 +4,6 @@ export interface IMemberOptions {
   description?: string;
   link?: string;
   url?: string;
-  avatar_urls?: { '96': string };
 }
 
 export class Member {
@@ -13,7 +12,7 @@ export class Member {
   description: string;
   link: string;
   blogUrl: string;
-  avatarUrl: string;
+  profileImg: string;
 
   constructor(options?: IMemberOptions) {
     this.id = options.id;
@@ -21,6 +20,10 @@ export class Member {
     this.description = options.description;
     this.link = options.link;
     this.blogUrl = options.url;
-    this.avatarUrl = options.avatar_urls['96'];
+    this.profileImg = this.mockImgs(options.id);
+  }
+
+  private mockImgs(id: number) {
+    return 'img/members/' + id + '.jpg';
   }
 }
