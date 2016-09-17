@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../../models/post';
+import { Member } from '../../models/member';
 import { WpDataMock } from './data/wp-data-mock';
 import 'rxjs/add/operator/map';
 
@@ -23,8 +24,30 @@ export class WpDataService {
     return posts;
   }
 
-  getPost(id: number): Post {
-    return this.getPosts().filter(function(post: Post) { return post.id === id; })[0];
+  getPostsBy(key: string, value: any): Post[] {
+    return this.getPosts().filter(function(post: Post) { return post[key] === value; });
+  }
+
+  getFirstPostBy(key: string, value: any): Post {
+    return this.getPostsBy(key, value)[0];
+  }
+
+  getMembers(): Member[] {
+    let members = <Member[]> [];
+
+    WpDataMock.getMembers().forEach(function(member: any) {
+      members.push(new Member(member));
+    });
+
+    return members;
+  }
+
+  getMembersBy(key: string, value: any): Member[] {
+    return this.getMembers().filter(function(member: Member) { return member[key] === value; });
+  }
+
+  getFirstMemberBy(key: string, value: any): Member {
+    return this.getMembersBy(key, value)[0];
   }
 }
 
