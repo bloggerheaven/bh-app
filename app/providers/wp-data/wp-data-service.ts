@@ -16,14 +16,15 @@ export class WpDataService {
   getPosts(): Post[] {
     let posts = <Post[]> [];
 
-    WpDataMock.getPost().forEach(function(post: any) {
+    WpDataMock.getPosts().forEach(function(post: any) {
       posts.push(new Post(post));
     });
 
     return posts;
   }
 
-  getPost(id: number) {
+  getPost(id: number): Post {
+    return this.getPosts().filter(function(post: Post) { return post.id === id; })[0];
   }
 }
 
