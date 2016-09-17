@@ -52,6 +52,6 @@
   "analyze": false,
   "scripts": {
     "postinstall": "npm install -g ionic cordova csscomb",
-    "test": "bin/check"
+    "test": "ionic build && bin/check"
   }
 }
