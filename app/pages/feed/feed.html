@@ -5,24 +5,24 @@
 </ion-header>
 
 <ion-content no-padding class="feed">
-  <ion-card *ngFor="let post of posts" no-margin on-tap="pushSinglePage(post.id)">
+  <ion-card *ngFor="let post of posts" no-margin>
     <ion-card-header>
       <ion-item>
-        <ion-item>
+        <ion-item on-tap="pushMemberPage(post.member)">
           <ion-avatar item-left>
             <img src="img/avatar-test.jpg">
           </ion-avatar>
           <span>Madame Charlie</span>
         </ion-item>
         <span item-right text-center>
-    <h3>37</h3>
-    <p>Likes</p>
-    </span>
+          <h3>37</h3>
+          <p>Likes</p>
+        </span>
       </ion-item>
     </ion-card-header>
 
-    <img src="img/mock-image-1.jpg"/>
-    <ion-card-content>
+    <img src="img/mock-image-1.jpg" on-tap="pushSinglePage(post.id)"/>
+    <ion-card-content on-tap="pushSinglePage(post.id)">
 
       <ion-item>
         <h2>{{post.title}}</h2>

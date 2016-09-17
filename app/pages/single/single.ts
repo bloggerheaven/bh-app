@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Post } from '../../models/post';
 import { WpDataService } from '../../providers/wp-data/wp-data-service';
-import { FeedPage } from '../feed/feed';
+import { MemberPage } from '../member/member';
 
 /*
   Generated class for the SinglePage page.
@@ -22,7 +22,13 @@ export class SinglePage {
     this.post = wpDataService.getFirstPostBy('id', this.params.get('postId'));
   }
 
-  popFeedPage() {
-    this.navCtrl.pop(FeedPage);
+  pushMemberPage(memberId) {
+    this.navCtrl.push(MemberPage, {
+      memberId: memberId
+    });
+  }
+
+  popPage() {
+    this.navCtrl.pop();
   }
 }

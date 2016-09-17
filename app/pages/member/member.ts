@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { WpDataService } from '../../providers/wp-data/wp-data-service';
+import { Member } from '../../models/member';
 
 /*
   Generated class for the MemberPage page.
@@ -9,11 +11,17 @@ import { NavController } from 'ionic-angular';
 */
 @Component({
   templateUrl: 'build/pages/member/member.html',
+  providers: [WpDataService]
 })
 export class MemberPage {
+  public member: Member;
 
-  constructor(private navCtrl: NavController) {
-
+  constructor(private navCtrl: NavController, private params: NavParams, private wpDataService: WpDataService) {
+    this.navCtrl = navCtrl;
+    this.member = wpDataService.getFirstMemberBy('id', this.params.get('memberId'));
   }
 
+  popPage() {
+    this.navCtrl.pop();
+  }
 }

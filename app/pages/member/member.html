@@ -1,8 +1,8 @@
 <ion-content class="member">
   <div class="post-header">
     <ion-toolbar>
-      <ion-buttons item-left>
-        <button royal>
+      <ion-buttons>
+        <button royal on-tap="popPage()">
           <ion-icon name="arrow-back"></ion-icon>
         </button>
       </ion-buttons>
@@ -19,7 +19,7 @@
   </ion-avatar>
 
   <div class="author-bio">
-    <h2>Madame Charlie</h2>
+    <h2>{{member.name}}</h2>
     <p>
       Mein Name ist Charlie und ich bin 22 Jahre alt. Aus dem einstigen Online-Tagebuch von vor 6 Jahren, hat sich mein Blog in eine Mischung aus Fashion, Travel und Lifestyle entwickelt.
     </p>
