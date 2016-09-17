@@ -1,1 +1,52 @@
+.single {
+  .post-header {
+    height: 260px;
+    padding: 16px;
 
+    background-image: url('http://magazin.bloggerheaven.de/wp-content/uploads/2016/08/daninanaa.files_.wordpress.com201608dsc1486-231e6a00580222449518f747c71f172826242f3c.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    ion-toolbar {
+      padding: 0;
+
+      .toolbar-background {
+        border: 0;
+        background-color: transparent;
+      }
+
+      .bar-button-default {
+        color: color($colors, _white);
+      }
+    }
+  }
+
+  ion-avatar {
+    margin-top: -3.5rem;
+    padding: 0 32px;
+
+    img {
+      min-width: 7rem;
+      min-height: 7rem;
+
+      border-radius: 3.5rem;
+    }
+  }
+
+  .post-content {
+    .post-content-meta {
+      padding: 0 32px;
+    }
+
+    h2 {
+      padding-top: 8px;
+      padding-bottom: 16px;
+    }
+    p {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+
+      padding: 0 32px;
+    }
+  }
+}
