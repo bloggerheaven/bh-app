@@ -1,1 +1,21 @@
+.feed {
+  ion-card {
+    width: 100%;
 
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+    box-shadow: none;
+
+    ion-card-header {
+      padding: 0 16px;
+    }
+
+    ion-item {
+      padding: 0;
+
+      .item-inner {
+        border: 0;
+      }
+    }
+  }
+}
