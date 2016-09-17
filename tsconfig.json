@@ -17,5 +17,6 @@
   "compileOnSave": false,
   "atom": {
     "rewriteTsconfig": false
-  }
+  },
+  "inlineSourceMap": true
 }
