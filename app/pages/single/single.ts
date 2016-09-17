@@ -23,6 +23,6 @@ export class SinglePage {
   }
 
   popFeedPage() {
-    this.navCtrl.pop(FeedPage)
+    this.navCtrl.pop(FeedPage);
   }
 }

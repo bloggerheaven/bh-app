@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Post } from '../../models/post';
 import { WpDataService } from '../../providers/wp-data/wp-data-service';
-import { SinglePage } from '../single/single'
+import { SinglePage } from '../single/single';
 
 /*
   Generated class for the FeedPage page.
@@ -25,6 +25,6 @@ export class FeedPage {
   pushSinglePage(postId) {
     this.navCtrl.push(SinglePage, {
       postId: postId
-    })
+    });
   }
 }
