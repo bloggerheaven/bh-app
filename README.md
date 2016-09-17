@@ -1,5 +1,7 @@
 # BH Magazine App
 
+[![Build Status](https://travis-ci.org/bloggerheaven/bh-app.svg?branch=master)](https://travis-ci.org/bloggerheaven/bh-app) [![Build Status](https://travis-ci.org/bloggerheaven/bh-app.svg?branch=develop)](https://travis-ci.org/bloggerheaven/bh-app)
+
 # Development
 
 ## Requirements
