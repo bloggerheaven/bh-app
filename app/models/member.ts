@@ -13,6 +13,7 @@ export class Member {
   link: string;
   blogUrl: string;
   profileImg: string;
+  backgroundImg: string;
 
   constructor(options?: IMemberOptions) {
     this.id = options.id;
@@ -21,9 +22,14 @@ export class Member {
     this.link = options.link;
     this.blogUrl = options.url;
     this.profileImg = this.mockImgs(options.id);
+    this.backgroundImg = this.mockBgImgs(options.id);
   }
 
   private mockImgs(id: number) {
     return 'img/members/' + id + '.jpg';
+  }
+
+  private mockBgImgs(id: number) {
+    return 'img/members/bg' + id + '.jpg';
   }
 }

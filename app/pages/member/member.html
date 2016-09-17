@@ -1,16 +1,16 @@
 <ion-content class="member">
-  <div class="post-header">
+  <div class="post-header" [ngStyle]="{'background-image': 'url('+member.backgroundImg+')'}">
     <ion-toolbar>
       <ion-buttons>
         <button royal on-tap="popPage()">
           <ion-icon name="arrow-back"></ion-icon>
         </button>
       </ion-buttons>
-      <ion-buttons end>
-        <button royal>
-          <ion-icon name="ios-more"></ion-icon>
-        </button>
-      </ion-buttons>
+      <!--<ion-buttons end>-->
+        <!--<button royal>-->
+          <!--<ion-icon name="ios-more"></ion-icon>-->
+        <!--</button>-->
+      <!--</ion-buttons>-->
     </ion-toolbar>
   </div>
 
@@ -21,7 +21,7 @@
   <div class="author-bio">
     <h2>{{member.name}}</h2>
     <p>
-      Mein Name ist Charlie und ich bin 22 Jahre alt. Aus dem einstigen Online-Tagebuch von vor 6 Jahren, hat sich mein Blog in eine Mischung aus Fashion, Travel und Lifestyle entwickelt.
+      {{member.description}}
     </p>
   </div>
 

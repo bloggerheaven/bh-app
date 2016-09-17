@@ -18,6 +18,7 @@ export class Post {
   member: number;
   categories: number[];
   tags: number[];
+  featuredImg: string;
 
   constructor(options?: IPostOptions) {
     this.id = options.id;
@@ -28,5 +29,10 @@ export class Post {
     this.member = options.author;
     this.categories = options.categories;
     this.tags = options.tags;
+    this.featuredImg = this.mockFeaturedImgs(options.id);
+  }
+
+  private mockFeaturedImgs(id: number) {
+    return 'img/posts/' + id + '.jpg';
   }
 }
