@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Post } from '../../models/post';
+import { WpData } from '../../providers/wp-data/wp-data';
 
 /*
   Generated class for the FeedPage page.
@@ -9,11 +11,12 @@ import { NavController } from 'ionic-angular';
 */
 @Component({
   templateUrl: 'build/pages/feed/feed.html',
+  providers: [WpData]
 })
 export class FeedPage {
+  public posts: Post[];
 
-  constructor(private navCtrl: NavController) {
-
+  constructor(private navCtrl: NavController, private wpData: WpData) {
+    this.posts = wpData.getPosts();
   }
-
 }
