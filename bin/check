@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+source ~/.zshrc
+
+echo -n $STRING | shasum -a 256
+
+DIFF_BEFORE=`git diff | shasum -a 256`
+csscomb -v app/**/*.scss
+DIFF_AFTER=`git diff | shasum -a 256`
+if [ ! $DIFF_BEFORE == $DIFF_AFTER ]; then
+  echo 'csscomb has rearranged some of your css that has to be reviewed manually, check failed'
+  exit 1
+fi
+
+gulp lint
+if [ ! $? -eq 0 ]; then
+  echo 'tslint detected issues, check failed'
+  exit 1
+fi
