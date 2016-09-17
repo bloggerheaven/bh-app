@@ -2,7 +2,7 @@
   <div class="post-header">
     <ion-toolbar>
       <ion-buttons>
-        <button royal on-tap="popFeedPage()">
+        <button royal on-tap="popPage()">
           <ion-icon name="arrow-back"></ion-icon>
         </button>
       </ion-buttons>
@@ -14,8 +14,8 @@
     </ion-toolbar>
   </div>
 
-  <ion-avatar>
-    <img src="img/avatar-test.jpg">
+  <ion-avatar on-tap="pushMemberPage(post.member)">
+    <img [src]="member.profileImg">
   </ion-avatar>
 
   <div class="post-content">

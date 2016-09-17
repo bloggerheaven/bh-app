@@ -1,12 +1,12 @@
 <ion-content class="members">
-  <ion-searchbar></ion-searchbar>
+  <!--<ion-searchbar></ion-searchbar>-->
 
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let member of members" on-tap="pushMemberPage(member.id)">
       <ion-avatar item-left>
-        <img src="img/avatar-test.jpg">
+        <img [src]="member.profileImg">
       </ion-avatar>
-      <h2>Caro Daur</h2>
+      <h2>{{member.name}}</h2>
       <p>107 Posts</p>
       <ion-icon name="notifications" item-right></ion-icon>
     </ion-item>

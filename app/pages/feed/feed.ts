@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Post } from '../../models/post';
+import { Member } from '../../models/member';
 import { WpDataService } from '../../providers/wp-data/wp-data-service';
 import { SinglePage } from '../single/single';
+import { MemberPage } from '../member/member';
 
 /*
   Generated class for the FeedPage page.
@@ -19,12 +21,23 @@ export class FeedPage {
 
   constructor(private navCtrl: NavController, private wpDataService: WpDataService) {
     this.navCtrl = navCtrl;
-    this.posts = wpDataService.getPosts();
+    this.wpDataService = wpDataService;
+    this.posts = this.wpDataService.getPosts();
+  }
+
+  findMember(post): Member {
+    return this.wpDataService.getFirstMemberBy('id', post.member);
   }
 
   pushSinglePage(postId) {
     this.navCtrl.push(SinglePage, {
       postId: postId
+    });
+  }
+
+  pushMemberPage(memberId) {
+    this.navCtrl.push(MemberPage, {
+      memberId: memberId
     });
   }
 }
