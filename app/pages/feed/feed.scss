@@ -10,6 +10,14 @@
       padding: 0 16px;
     }
 
+    .post-image {
+      height: 200px;
+      max-height: 200px;
+
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
     ion-item {
       padding: 0;
 

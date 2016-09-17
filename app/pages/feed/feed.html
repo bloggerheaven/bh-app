@@ -8,8 +8,7 @@
 
 <ion-content no-padding class="feed">
 
-  <ion-card no-margin>
-
+  <ion-card *ngFor="#post of posts" no-margin>
     <ion-card-header>
       <ion-item>
         <ion-item>
@@ -25,7 +24,6 @@
       </ion-item>
     </ion-card-header>
 
-    <img src="img/mock-image-1.jpg"/>
     <ion-card-content>
 
       <ion-item>
@@ -33,6 +31,7 @@
         <p>#Outfit #Look #Autumn</p>
         <ion-icon name="arrow-forward" item-right large></ion-icon>
       </ion-item>
+      <div class="post-image" style="background-image: url('http://magazin.bloggerheaven.de/wp-content/uploads/2016/08/daninanaa.files_.wordpress.com201608dsc1486-231e6a00580222449518f747c71f172826242f3c.jpg');"></div>
 
     </ion-card-content>
   </ion-card>
@@ -53,7 +52,6 @@
       </ion-item>
     </ion-card-header>
 
-    <img src="img/mock-image-2.jpg"/>
     <ion-card-content>
 
       <ion-item>
@@ -61,6 +59,7 @@
         <p>#Look</p>
         <ion-icon name="arrow-forward" item-right large></ion-icon>
       </ion-item>
+      <div class="post-image" style="background-image: url('http://magazin.bloggerheaven.de/wp-content/uploads/2016/08/daninanaa.files_.wordpress.com201608dsc1486-231e6a00580222449518f747c71f172826242f3c.jpg');"></div>
 
     </ion-card-content>
   </ion-card>
@@ -81,7 +80,6 @@
       </ion-item>
     </ion-card-header>
 
-    <img src="img/mock-image-3.jpg"/>
     <ion-card-content>
 
       <ion-item>
@@ -89,6 +87,7 @@
         <p>#Outfit #Look #Autumn</p>
         <ion-icon name="arrow-forward" item-right large></ion-icon>
       </ion-item>
+      <div class="post-image" style="background-image: url('http://magazin.bloggerheaven.de/wp-content/uploads/2016/08/daninanaa.files_.wordpress.com201608dsc1486-231e6a00580222449518f747c71f172826242f3c.jpg');"></div>
 
     </ion-card-content>
   </ion-card>
