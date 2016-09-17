@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SocialSharing } from 'ionic-native';
 import { NavController, NavParams } from 'ionic-angular';
 import { Post } from '../../models/post';
 import { Member } from '../../models/member';
@@ -33,5 +34,9 @@ export class SinglePage {
 
   popPage() {
     this.navCtrl.pop();
+  }
+
+  share(post: Post) {
+    SocialSharing.share(null, null, null, post.link);
   }
 }

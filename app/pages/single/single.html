@@ -7,7 +7,7 @@
         </button>
       </ion-buttons>
       <ion-buttons end>
-        <button royal>
+        <button royal on-tap="share(post)">
           <ion-icon name="ios-share-outline"></ion-icon>
         </button>
       </ion-buttons>
@@ -20,28 +20,11 @@
 
   <div class="post-content">
     <div class="post-content-meta">
-      <h2>{{post.title}}</h2>
+      <h3>{{post.title}}</h3>
       <hr>
     </div>
-    <p>
-      Hey ihr Lieben,
-
-  endlich haben wir in Hamburg wieder ein tolles sonniges Wetter, daher habe ich mich für den heutigen Post für einen leicht bohemic-inspirierten Look entschieden. Perfekt zu meiner lockeren Flechtfrisur, habe ich meine neue Campomaggi Beuteltasche von Lieblingstasche mit meinem geliebten Boho-Kleid, meinen Lieblingsbooties und einem lässig sitzenden Cardigan entschieden. Ich habe mich direkt in die matten Nieten und den rockigen Charme meiner neuen Lieblingstasche verliebt.
-
-  Die Idee hinter dem Shop ist, dass man sich aus einem hochwertigen Sortiment, seine persönliche Lieblingstasche aussucht und diese sehr schnell nach Kauf in den Händen hält. Meine Tasche kam nach der Bestellung schon 2 Tage später an und war sehr liebevoll verpackt, wie Ihr schon auf Snapchat Dani_nanaa sehen konntet. Falls ihr mal einen genaueren Blick auf die schönen Stücke werfen möchtet, hier einmal der Link für euch: http://www.lieblingstasche.de.
-
-    </p>
-      <img src="img/mock-image-3.jpg"/>
-      <img src="img/mock-image-1.jpg"/>
-
-    <p>
-      Hey ihr Lieben,
-
-  endlich haben wir in Hamburg wieder ein tolles sonniges Wetter, daher habe ich mich für den heutigen Post für einen leicht bohemic-inspirierten Look entschieden. Perfekt zu meiner lockeren Flechtfrisur, habe ich meine neue Campomaggi Beuteltasche von Lieblingstasche mit meinem geliebten Boho-Kleid, meinen Lieblingsbooties und einem lässig sitzenden Cardigan entschieden. Ich habe mich direkt in die matten Nieten und den rockigen Charme meiner neuen Lieblingstasche verliebt.
-
-  Die Idee hinter dem Shop ist, dass man sich aus einem hochwertigen Sortiment, seine persönliche Lieblingstasche aussucht und diese sehr schnell nach Kauf in den Händen hält. Meine Tasche kam nach der Bestellung schon 2 Tage später an und war sehr liebevoll verpackt, wie Ihr schon auf Snapchat Dani_nanaa sehen konntet. Falls ihr mal einen genaueren Blick auf die schönen Stücke werfen möchtet, hier einmal der Link für euch: http://www.lieblingstasche.de.
-    </p>
-    <img src="img/mock-image-2.jpg"/>
+    <div class="html-content" [innerHTML]="post.content">
+    </div>
   </div>
 
 </ion-content>
