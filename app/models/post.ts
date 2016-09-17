@@ -15,7 +15,7 @@ export class Post {
   link: string;
   title: string;
   content: string;
-  author: number;
+  member: number;
   categories: number[];
   tags: number[];
 
@@ -25,7 +25,7 @@ export class Post {
     this.link = options.link;
     this.title = options.title.rendered;
     this.content = options.content.rendered;
-    this.author = options.author;
+    this.member = options.author;
     this.categories = options.categories;
     this.tags = options.tags;
   }
