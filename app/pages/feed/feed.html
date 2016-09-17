@@ -20,10 +20,8 @@
         </span>
       </ion-item>
     </ion-card-header>
-
-    <img src="img/mock-image-{{i}}.jpg" />
+    <div class="post-image" [ngStyle]="{'background-image': 'url(img/mock-image-' + i + '.jpg)'}"></div>
     <ion-card-content>
-
       <ion-item>
         <h2>{{post.title}}</h2>
         <p>#Outfit #Look #Autumn</p>
