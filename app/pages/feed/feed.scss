@@ -2,7 +2,7 @@
   ion-card {
     width: 100%;
 
-    border-bottom: 1px solid $decent;
+    border-bottom: 1px solid color($colors, decent);
     border-radius: 0;
     box-shadow: none;
 
