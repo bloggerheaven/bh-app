@@ -10,6 +10,7 @@ platforms/*
 plugins/*
 !plugins/fetch.json
 !plugins/ios.json
+!plugins/android.json
 *.swp
 .DS_Store
 Thumbs.db
