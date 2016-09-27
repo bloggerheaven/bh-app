@@ -17,7 +17,6 @@ export class MemberPage {
   public member: Member;
 
   constructor(private navCtrl: NavController, private params: NavParams, private wpDataService: WpDataService) {
-    this.navCtrl = navCtrl;
     this.member = wpDataService.getFirstMemberBy('id', this.params.get('memberId'));
   }
 

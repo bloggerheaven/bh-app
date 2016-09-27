@@ -14,9 +14,7 @@ export class SearchPage {
   posts: Post[];
 
   constructor(private navCtrl: NavController, private wpDataService: WpDataService) {
-    this.navCtrl = navCtrl;
     this.posts = [];
-    this.wpDataService = wpDataService;
   }
 
   searchPosts(event) {
