@@ -40,11 +40,11 @@ export class SingleTrackService {
     this.storage.query('INSERT INTO tracks(postId, duration) VALUES (?,?)', [this.track.postId, this.track.duration]);
   }
 
-  private _selectTracks() {
+  private selectTracks() {
     this.storage.query('SELECT * FROM tracks').then((data) => {
       const rows = data.res.rows;
 
-      const tracks = Object.keys(rows).reduce(function (tracks: SingleTrack[], index: string) {
+      Object.keys(rows).reduce(function (tracks: SingleTrack[], index: string) {
         let trackOptions = rows[index];
 
         tracks.push(new SingleTrack({
