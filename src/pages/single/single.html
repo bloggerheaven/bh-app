@@ -1,0 +1,30 @@
+<ion-content class="single">
+  <div class="post-header" [ngStyle]="{'background-image': 'url('+post.featuredImg+')'}">
+    <ion-toolbar>
+      <ion-buttons>
+        <button royal on-tap="popPage()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-buttons end>
+        <button royal on-tap="share(post)">
+          <ion-icon name="ios-share-outline"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+
+  <ion-avatar on-tap="pushMemberPage(post.member)">
+    <img [src]="member.profileImg">
+  </ion-avatar>
+
+  <div class="post-content">
+    <div class="post-content-meta">
+      <h3>{{post.title}}</h3>
+      <hr>
+    </div>
+    <div class="html-content" [innerHTML]="post.content">
+    </div>
+  </div>
+
+</ion-content>
