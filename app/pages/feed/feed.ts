@@ -20,8 +20,6 @@ export class FeedPage {
   public posts: Post[];
 
   constructor(private navCtrl: NavController, private wpDataService: WpDataService) {
-    this.navCtrl = navCtrl;
-    this.wpDataService = wpDataService;
     this.posts = this.wpDataService.getPosts();
   }
 

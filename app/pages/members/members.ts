@@ -18,7 +18,6 @@ export class MembersPage {
   public members: Member[];
 
   constructor(private navCtrl: NavController, private wpDataService: WpDataService) {
-    this.navCtrl = navCtrl;
     this.members = wpDataService.getMembers();
   }
 
